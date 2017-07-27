@@ -4,12 +4,19 @@
 
 .mobile{
   display:inline-block;
+  padding-top: 50px;
 }
 
 .planet-div {
   padding-bottom: 15vh;
   text-align: center;
   width: 100vw;
+}
+
+.sun{
+  width: auto;
+  display: inline;
+  margin: auto;
 }
 
 .planet{
@@ -44,19 +51,17 @@
   .planet {
     height: auto;
     z-index: 1;
-    -webkit-animation: spin-right 20s linear infinite;
-    animation: spin-right 20s linear infinite;
   }
 
-  #sun {
+  .sun {
     z-index: 1;
     height: 100px;
   }
 
   #sun-orbit {
     position: absolute;
-    top: 1040px;
-    left: 1040px;
+    top: 1035px;
+    left: 1035px;
   }
 
   #mercury-orbit {
@@ -71,6 +76,11 @@
     animation: orbit-right 10s linear infinite;
   }
 
+  .mercury{
+    -webkit-animation: spin-right 20s linear infinite;
+    animation: spin-right 20s linear infinite;
+  }
+
   #venus-orbit {
     position: absolute;
     top: 900px;
@@ -83,8 +93,10 @@
     animation: orbit-right 15s linear infinite;
   }
 
-  #venus {
+  .venus {
     padding: 25px;
+    -webkit-animation: spin-right 30s linear infinite;
+    animation: spin-right 30s linear infinite;
   }
 
   #earth-orbit {
@@ -99,8 +111,10 @@
     animation: orbit-right 20s linear infinite;
   }
 
-  #earth {
+  .earth {
     padding: 35px;
+    -webkit-animation: spin-right 15s linear infinite;
+    animation: spin-right 15s linear infinite;
   }
 
   #mars-orbit {
@@ -115,8 +129,10 @@
     animation: orbit-right 25s linear infinite;
   }
 
-  #mars {
+  .mars {
     padding: 75px;
+    -webkit-animation: spin-right 20s linear infinite;
+    animation: spin-right 20s linear infinite;
   }
 
   #jupiter-orbit {
@@ -131,8 +147,10 @@
     animation: orbit-right 30s linear infinite;
   }
 
-  #jupiter {
+  .jupiter {
     padding: 80px;
+    -webkit-animation: spin-right 40s linear infinite;
+    animation: spin-right 40s linear infinite;
   }
 
   #saturn-orbit {
@@ -147,8 +165,10 @@
     animation: orbit-right 35s linear infinite;
   }
 
-  #saturn {
+  .saturn {
     padding: 95px;
+    -webkit-animation: spin-right 50s linear infinite;
+    animation: spin-right 50s linear infinite;
   }
 
   #uranus-orbit {
@@ -163,8 +183,10 @@
     animation: orbit-right 40s linear infinite;
   }
 
-  #uranus {
+  .uranus {
     padding: 125px;
+    -webkit-animation: spin-right 60s linear infinite;
+    animation: spin-right 60s linear infinite;
   }
 
   #neptune-orbit {
@@ -179,8 +201,10 @@
     animation: orbit-right 45s linear infinite;
   }
 
-  #neptune {
+  .neptune {
     padding: 175px;
+    -webkit-animation: spin-right 50s linear infinite;
+    animation: spin-right 50s linear infinite;
   }
 
   #pluto-orbit {
@@ -195,8 +219,10 @@
     animation: orbit-right 50s linear infinite;
   }
 
-  #pluto {
+  .pluto {
     padding: 240px;
+    -webkit-animation: spin-right 20s linear infinite;
+    animation: spin-right 20s linear infinite;
   }
 
   @-webkit-keyframes spin-right {
