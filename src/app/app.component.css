@@ -1,0 +1,146 @@
+.planet{
+  width: 20%;
+  height: auto;
+  z-index: 1;
+}
+
+#sun-orbit{
+  position: absolute;
+  top: 335px;
+  left: 335px;
+}
+
+#mercury-orbit {
+  position: absolute;
+  top: 325px;
+  left: 325px;
+  width: 175px;
+  height: 175px;
+  border: 2px #4A437F dashed;
+  border-radius: 100%;
+  -webkit-animation: orbit-right 10s linear infinite;
+  animation: orbit-right 10s linear infinite;
+}
+
+#venus-orbit {
+  position: absolute;
+  top: 295px;
+  left: 295px;
+  width: 240px;
+  height: 240px;
+  border: 2px #4A437F dashed;
+  border-radius: 100%;
+  -webkit-animation: orbit-right 15s linear infinite;
+  animation: orbit-right 15s linear infinite;
+}
+
+#earth-orbit {
+  position: absolute;
+  top: 265px;
+  left: 265px;
+  width: 300px;
+  height: 300px;
+  border: 2px #4A437F dashed;
+  border-radius: 100%;
+  -webkit-animation: orbit-right 20s linear infinite;
+  animation: orbit-right 20s linear infinite;
+}
+
+#mars-orbit {
+  position: absolute;
+  top: 225px;
+  left: 225px;
+  width: 380px;
+  height: 380px;
+  border: 2px #4A437F dashed;
+  border-radius: 100%;
+  -webkit-animation: orbit-right 25s linear infinite;
+  animation: orbit-right 25s linear infinite;
+}
+
+#jupiter-orbit {
+  position: absolute;
+  top: 185px;
+  left: 185px;
+  width: 470px;
+  height: 470px;
+  border: 2px #4A437F dashed;
+  border-radius: 100%;
+  -webkit-animation: orbit-right 30s linear infinite;
+  animation: orbit-right 30s linear infinite;
+}
+
+#saturn-orbit {
+  position: absolute;
+  top: 145px;
+  left: 145px;
+  width: 550px;
+  height: 550px;
+  border: 2px #4A437F dashed;
+  border-radius: 100%;
+  -webkit-animation: orbit-right 35s linear infinite;
+  animation: orbit-right 35s linear infinite;
+}
+
+#uranus-orbit {
+  position: absolute;
+  top: 105px;
+  left: 105px;
+  width: 625px;
+  height: 625px;
+  border: 2px #4A437F dashed;
+  border-radius: 100%;
+  -webkit-animation: orbit-right 40s linear infinite;
+  animation: orbit-right 40s linear infinite;
+}
+
+#neptune-orbit {
+  position: absolute;
+  top: 65px;
+  left: 65px;
+  width: 700px;
+  height: 700px;
+  border: 2px #4A437F dashed;
+  border-radius: 100%;
+  -webkit-animation: orbit-right 45s linear infinite;
+  animation: orbit-right 45s linear infinite;
+}
+
+#pluto-orbit {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 775px;
+  height: 775px;
+  border: 2px #4A437F dashed;
+  border-radius: 100%;
+  -webkit-animation: orbit-right 50s linear infinite;
+  animation: orbit-right 50s linear infinite;
+}
+
+.planet{
+  -webkit-animation: spin-right 50s linear infinite;
+  animation: spin-right 50s linear infinite;
+}
+
+@-webkit-keyframes spin-right {
+  100%{
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes orbit-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
