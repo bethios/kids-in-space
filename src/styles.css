@@ -4,5 +4,6 @@ body{
   background-size: 50%;
   background-attachment: fixed;
   cursor: url('./assets/rocket.png'), default;
+  overflow: scroll;
 }
 
