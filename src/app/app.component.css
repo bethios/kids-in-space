@@ -75,6 +75,46 @@ nav{
     position: relative;
   }
 
+  #constellation1{
+    top: 50px;
+    left: 50px;
+    position: relative;
+    width: 150px;
+    display: inline;
+  }
+
+  #constellation2{
+    top: 50px;
+    left: 1500px;
+    position: relative;
+    width: 150px;
+    display: inline;
+  }
+
+  #constellation3{
+    top: 1750px;
+    left: 50px;
+    position: relative;
+    width: 150px;
+    display: inline;
+  }
+
+  #constellation4{
+    top: 0px;
+    left: 500px;
+    position: relative;
+    width: 150px;
+    display: inline;
+  }
+
+  #constellation5{
+    top: 1500px;
+    left: 1200px;
+    position: relative;
+    width: 150px;
+    display: inline;
+  }
+
   .nav{
     cursor: pointer;
     display: block;
@@ -301,14 +341,14 @@ nav{
 
   @keyframes flight-path
   {
-    0%   {left:-100px; top:-100px;  }
-    100% {left: 1000px; top: 2000px;}
+    0%   {left: 200px; top:-100px;  }
+    100% {left: 1200px; top: 2000px;}
   }
 
   @-webkit-keyframes flight-path
   {
-    0%   {left:-100px; top:-100px;  }
-    100% {left: 1000px; top: 2000px;}
+    0%   {left:200px; top:-100px;  }
+    100% {left: 1200px; top: 2000px;}
   }
 
   @-moz-keyframes flight-path
@@ -320,25 +360,25 @@ nav{
   @keyframes ufo-path
   {
     0%   {left:200px; top: 2000px;  }
-    50%   {left:2000px; top: 1000px;  }
-    75%   {left:1500px; top: 500px;  }
-    100% {left: 2000px; top: -100px;}
+    50%   {left:1200px; top: 1000px;  }
+    75%   {left:800px; top: 500px;  }
+    100% {left: 1200px; top: -100px;}
   }
 
   @-webkit-keyframes ufo-path
   {
     0%   {left:200px; top: 2000px;  }
-    50%   {left:2000px; top: 1000px;  }
-    75%   {left:1500px; top: 500px;  }
-    100% {left: 2000px; top: -100px;}
+    50%   {left:1200px; top: 1000px;  }
+    75%   {left:800px; top: 500px;  }
+    100% {left: 1200px; top: -100px;}
   }
 
   @-moz-keyframes ufo-path
   {
     0%   {left:200px; top: 2000px;  }
-    50%   {left:2000px; top: 1000px;  }
-    75%   {left:1500px; top: 500px;  }
-    100% {left: 2000px; top: -100px;}
+    50%   {left:1200px; top: 1000px;  }
+    75%   {left:800px; top: 500px;  }
+    100% {left: 1200px; top: -100px;}
   }
 
   @keyframes comet-path
