@@ -9,6 +9,10 @@ export class AppComponent {
   title = 'Kids In Space';
   lastSelectedOrbit ;
 
+  planetInfo(planet){
+    console.log("planet" + planet);
+  }
+
   scrollTo(element){
     let orbit = element + "-orbit";
     let location = document.getElementsByClassName(element)[0];
