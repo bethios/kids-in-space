@@ -1,20 +1,5 @@
-.nav{
-  bottom: 0;
-  position: fixed;
-  color: white;
-}
-
-.nav ul{
-  display: block;
-  list-style: none;
-  background-color: black;
-}
-
-.nav ul li {
-  display: inline-block;
-  padding: 10px 15px;
-  font-weight: 900;
-  font-size: 1.2em;
+nav{
+  display:none;
 }
 
 #circle-orbit-container{
@@ -63,10 +48,58 @@
     display: none;
   }
 
+  #rocket{
+    z-index: 2;
+    -webkit-animation: flight-path 30s linear infinite;
+    animation: flight-path 30s linear infinite;
+    top: 0;
+    left: 0;
+    position: relative;
+  }
+
+  #ufo{
+    z-index: 2;
+    -webkit-animation: ufo-path 50s linear infinite;
+    animation: ufo-path 50s linear infinite;
+    bottom: 0;
+    left: 200px;
+    position: relative;
+  }
+
+  #comet{
+    z-index: 2;
+    -webkit-animation: comet-path 40s linear infinite;
+    animation: comet-path 40s linear infinite;
+    top: -100px;
+    left: 2000px;
+    position: relative;
+  }
+
+  .nav{
+    cursor: pointer;
+    display: block;
+    bottom: 0;
+    position: fixed;
+    color: white;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .nav ul{
+    display: block;
+    list-style: none;
+    background-color: black;
+  }
+
+  .nav ul li {
+    display: inline-block;
+    padding: 10px 15px;
+    font-weight: 900;
+    font-size: 1.4em;
+  }
+
   #circle-orbit-container {
     display: inline-block;
-    -webkit-animation: zoom 10s linear ;
-    animation: zoom 10s linear ;
   }
 
   .planet {
@@ -264,6 +297,66 @@
       -o-transform: rotate(360deg);
       transform: rotate(360deg);
     }
+  }
+
+  @keyframes flight-path
+  {
+    0%   {left:-100px; top:-100px;  }
+    100% {left: 1000px; top: 2000px;}
+  }
+
+  @-webkit-keyframes flight-path
+  {
+    0%   {left:-100px; top:-100px;  }
+    100% {left: 1000px; top: 2000px;}
+  }
+
+  @-moz-keyframes flight-path
+  {
+    0%   {left:-100px; top:-100px;  }
+    100% {left: 1000px; top: 2000px;}
+  }
+
+  @keyframes ufo-path
+  {
+    0%   {left:200px; top: 2000px;  }
+    50%   {left:2000px; top: 1000px;  }
+    75%   {left:1500px; top: 500px;  }
+    100% {left: 2000px; top: -100px;}
+  }
+
+  @-webkit-keyframes ufo-path
+  {
+    0%   {left:200px; top: 2000px;  }
+    50%   {left:2000px; top: 1000px;  }
+    75%   {left:1500px; top: 500px;  }
+    100% {left: 2000px; top: -100px;}
+  }
+
+  @-moz-keyframes ufo-path
+  {
+    0%   {left:200px; top: 2000px;  }
+    50%   {left:2000px; top: 1000px;  }
+    75%   {left:1500px; top: 500px;  }
+    100% {left: 2000px; top: -100px;}
+  }
+
+  @keyframes comet-path
+  {
+    0%   {left:2000px; top:-100px;  }
+    100% {left: -100px; top: 2000px;}
+  }
+
+  @-webkit-keyframes comet-path
+  {
+    0%   {left:2000px; top:-100px;  }
+    100% {left: -100px; top: 2000px;}
+  }
+
+  @-moz-keyframes comet-path
+  {
+    0%   {left:2000px; top:-100px;  }
+    100% {left: -100px; top: 2000px;}
   }
 
   @-webkit-keyframes zoom {

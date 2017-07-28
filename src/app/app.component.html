@@ -1,4 +1,7 @@
+
 <div id="circle-orbit-container">
+  <img id="rocket" src="./assets/rocket.png">
+
   <div id="sun-orbit">
     <img  class="sun" src="./assets/sun.png">
   </div>
@@ -29,6 +32,9 @@
   <div id="pluto-orbit">
     <img  class="planet pluto" src="./assets/Pluto.png">
   </div>
+  <img id="ufo" src="./assets/UFO.png">
+  <img id="comet" src="./assets/comet.png">
+
 </div>
 
 <div class="mobile">
@@ -41,11 +47,10 @@
   <div class="planet-div"><img class="earth planet" src="./assets/Earth.png"></div>
   <div class="planet-div"><img class="venus planet" src="./assets/Venus.png"></div>
   <div class="planet-div"><img class="mercury planet" src="./assets/Mercury.png"></div>
-  <div class="planet-div"><img id="sun" src="./assets/sun.png"></div>
+  <div class="planet-div"><img class="sun" src="./assets/sun.png"></div>
 </div>
 
 <div class="nav">
-  <input type="range" #ref (change)="changeZoom(ref.value)"/>
   <ul>
     <li (click)="scrollTo('sun')">Sun</li>
     <li (click)="scrollTo('mercury')">Mercury</li>
