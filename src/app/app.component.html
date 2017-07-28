@@ -44,5 +44,20 @@
   <div class="planet-div"><img id="sun" src="./assets/sun.png"></div>
 </div>
 
+<div class="nav">
+  <input type="range" #ref (change)="changeZoom(ref.value)"/>
+  <ul>
+    <li (click)="scrollTo('sun')">Sun</li>
+    <li (click)="scrollTo('mercury')">Mercury</li>
+    <li (click)="scrollTo('venus')">Venus</li>
+    <li (click)="scrollTo('earth')">Earth</li>
+    <li (click)="scrollTo('mars')">Mars</li>
+    <li (click)="scrollTo('jupiter')">Jupiter</li>
+    <li (click)="scrollTo('saturn')">Saturn</li>
+    <li (click)="scrollTo('uranus')">Uranus</li>
+    <li (click)="scrollTo('neptune')">Neptune</li>
+    <li (click)="scrollTo('pluto')">Pluto</li>
+  </ul>
+</div>
 
 

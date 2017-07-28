@@ -4,5 +4,6 @@ body{
   background-size: 50%;
   background-attachment: fixed;
   overflow: scroll;
+  font-family: 'Cairo', sans-serif;
 }
 

@@ -1,3 +1,22 @@
+.nav{
+  bottom: 0;
+  position: fixed;
+  color: white;
+}
+
+.nav ul{
+  display: block;
+  list-style: none;
+  background-color: black;
+}
+
+.nav ul li {
+  display: inline-block;
+  padding: 10px 15px;
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
 #circle-orbit-container{
   display: none;
 }
@@ -46,6 +65,8 @@
 
   #circle-orbit-container {
     display: inline-block;
+    -webkit-animation: zoom 10s linear ;
+    animation: zoom 10s linear ;
   }
 
   .planet {
@@ -243,6 +264,16 @@
       -o-transform: rotate(360deg);
       transform: rotate(360deg);
     }
+  }
+
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+  }
+
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
   }
 
 }
