@@ -1,0 +1,412 @@
+nav{
+  display:none;
+}
+
+#circle-orbit-container{
+  display: none;
+}
+
+.mobile{
+  display:inline-block;
+  padding-top: 50px;
+}
+
+.planet-div {
+  padding-bottom: 15vh;
+  text-align: center;
+  width: 100vw;
+}
+
+.sun{
+  width: auto;
+  display: inline;
+  margin: auto;
+}
+
+.planet{
+  width: auto;
+  display: inline;
+  margin: auto;
+  -webkit-transition-duration: 4s;
+  -moz-transition-duration: 4s;
+  -o-transition-duration: 4s;
+  transition-duration: 4s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+}
+
+.planet:active{
+  -webkit-transform:rotate(360deg);
+  -moz-transform:rotate(360deg);
+  -o-transform:rotate(360deg);
+}
+
+@media (min-width: 1000px) {
+  .mobile {
+    display: none;
+  }
+
+  #rocket{
+    z-index: 2;
+    -webkit-animation: flight-path 30s linear infinite;
+    animation: flight-path 30s linear infinite;
+    top: 0;
+    left: 0;
+    position: relative;
+  }
+
+  #ufo{
+    z-index: 2;
+    -webkit-animation: ufo-path 50s linear infinite;
+    animation: ufo-path 50s linear infinite;
+    bottom: 0;
+    left: 200px;
+    position: relative;
+  }
+
+  #comet{
+    z-index: 2;
+    -webkit-animation: comet-path 40s linear infinite;
+    animation: comet-path 40s linear infinite;
+    top: -100px;
+    left: 2000px;
+    position: relative;
+  }
+
+  #constellation1{
+    top: 50px;
+    left: 50px;
+    position: relative;
+    width: 150px;
+    display: inline;
+  }
+
+  #constellation2{
+    top: 50px;
+    left: 1500px;
+    position: relative;
+    width: 150px;
+    display: inline;
+  }
+
+  #constellation3{
+    top: 1750px;
+    left: 50px;
+    position: relative;
+    width: 150px;
+    display: inline;
+  }
+
+  #constellation4{
+    top: 0px;
+    left: 500px;
+    position: relative;
+    width: 150px;
+    display: inline;
+  }
+
+  #constellation5{
+    top: 1500px;
+    left: 1200px;
+    position: relative;
+    width: 150px;
+    display: inline;
+  }
+
+  .nav{
+    cursor: pointer;
+    display: block;
+    bottom: 0;
+    position: fixed;
+    color: white;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .nav ul{
+    display: block;
+    list-style: none;
+    background-color: black;
+  }
+
+  .nav ul li {
+    display: inline-block;
+    padding: 10px 15px;
+    font-weight: 900;
+    font-size: 1.4em;
+  }
+
+  #circle-orbit-container {
+    display: inline-block;
+  }
+
+  .planet {
+    height: auto;
+    z-index: 1;
+  }
+
+  .sun {
+    z-index: 1;
+    height: 100px;
+  }
+
+  #sun-orbit {
+    position: absolute;
+    top: 1035px;
+    left: 1035px;
+  }
+
+  #mercury-orbit {
+    position: absolute;
+    top: 1000px;
+    left: 1000px;
+    width: 175px;
+    height: 175px;
+    border: 2px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: orbit-right 10s linear infinite;
+    animation: orbit-right 10s linear infinite;
+  }
+
+  .mercury{
+    -webkit-animation: spin-right 20s linear infinite;
+    animation: spin-right 20s linear infinite;
+  }
+
+  #venus-orbit {
+    position: absolute;
+    top: 900px;
+    left: 900px;
+    width: 375px;
+    height: 375px;
+    border: 2px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: orbit-right 15s linear infinite;
+    animation: orbit-right 15s linear infinite;
+  }
+
+  .venus {
+    padding: 25px;
+    -webkit-animation: spin-right 30s linear infinite;
+    animation: spin-right 30s linear infinite;
+  }
+
+  #earth-orbit {
+    position: absolute;
+    top: 800px;
+    left: 800px;
+    width: 575px;
+    height: 575px;
+    border: 2px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: orbit-right 20s linear infinite;
+    animation: orbit-right 20s linear infinite;
+  }
+
+  .earth {
+    padding: 35px;
+    -webkit-animation: spin-right 15s linear infinite;
+    animation: spin-right 15s linear infinite;
+  }
+
+  #mars-orbit {
+    position: absolute;
+    top: 700px;
+    left: 700px;
+    width: 775px;
+    height: 775px;
+    border: 2px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: orbit-right 25s linear infinite;
+    animation: orbit-right 25s linear infinite;
+  }
+
+  .mars {
+    padding: 75px;
+    -webkit-animation: spin-right 20s linear infinite;
+    animation: spin-right 20s linear infinite;
+  }
+
+  #jupiter-orbit {
+    position: absolute;
+    top: 600px;
+    left: 600px;
+    width: 975px;
+    height: 975px;
+    border: 2px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: orbit-right 30s linear infinite;
+    animation: orbit-right 30s linear infinite;
+  }
+
+  .jupiter {
+    padding: 80px;
+    -webkit-animation: spin-right 40s linear infinite;
+    animation: spin-right 40s linear infinite;
+  }
+
+  #saturn-orbit {
+    position: absolute;
+    top: 500px;
+    left: 500px;
+    width: 1175px;
+    height: 1175px;
+    border: 2px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: orbit-right 35s linear infinite;
+    animation: orbit-right 35s linear infinite;
+  }
+
+  .saturn {
+    padding: 95px;
+    -webkit-animation: spin-right 50s linear infinite;
+    animation: spin-right 50s linear infinite;
+  }
+
+  #uranus-orbit {
+    position: absolute;
+    top: 400px;
+    left: 400px;
+    width: 1375px;
+    height: 1375px;
+    border: 2px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: orbit-right 40s linear infinite;
+    animation: orbit-right 40s linear infinite;
+  }
+
+  .uranus {
+    padding: 125px;
+    -webkit-animation: spin-right 60s linear infinite;
+    animation: spin-right 60s linear infinite;
+  }
+
+  #neptune-orbit {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    width: 1575px;
+    height: 1575px;
+    border: 2px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: orbit-right 45s linear infinite;
+    animation: orbit-right 45s linear infinite;
+  }
+
+  .neptune {
+    padding: 175px;
+    -webkit-animation: spin-right 50s linear infinite;
+    animation: spin-right 50s linear infinite;
+  }
+
+  #pluto-orbit {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    width: 1775px;
+    height: 1775px;
+    border: 2px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: orbit-right 50s linear infinite;
+    animation: orbit-right 50s linear infinite;
+  }
+
+  .pluto {
+    padding: 240px;
+    -webkit-animation: spin-right 20s linear infinite;
+    animation: spin-right 20s linear infinite;
+  }
+
+  @-webkit-keyframes spin-right {
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes orbit-right {
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes flight-path
+  {
+    0%   {left: 200px; top:-100px;  }
+    100% {left: 1200px; top: 2000px;}
+  }
+
+  @-webkit-keyframes flight-path
+  {
+    0%   {left:200px; top:-100px;  }
+    100% {left: 1200px; top: 2000px;}
+  }
+
+  @-moz-keyframes flight-path
+  {
+    0%   {left:-100px; top:-100px;  }
+    100% {left: 1000px; top: 2000px;}
+  }
+
+  @keyframes ufo-path
+  {
+    0%   {left:200px; top: 2000px;  }
+    50%   {left:1200px; top: 1000px;  }
+    75%   {left:800px; top: 500px;  }
+    100% {left: 1200px; top: -100px;}
+  }
+
+  @-webkit-keyframes ufo-path
+  {
+    0%   {left:200px; top: 2000px;  }
+    50%   {left:1200px; top: 1000px;  }
+    75%   {left:800px; top: 500px;  }
+    100% {left: 1200px; top: -100px;}
+  }
+
+  @-moz-keyframes ufo-path
+  {
+    0%   {left:200px; top: 2000px;  }
+    50%   {left:1200px; top: 1000px;  }
+    75%   {left:800px; top: 500px;  }
+    100% {left: 1200px; top: -100px;}
+  }
+
+  @keyframes comet-path
+  {
+    0%   {left:2000px; top:-100px;  }
+    100% {left: -100px; top: 2000px;}
+  }
+
+  @-webkit-keyframes comet-path
+  {
+    0%   {left:2000px; top:-100px;  }
+    100% {left: -100px; top: 2000px;}
+  }
+
+  @-moz-keyframes comet-path
+  {
+    0%   {left:2000px; top:-100px;  }
+    100% {left: -100px; top: 2000px;}
+  }
+
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+  }
+
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+
+}
