@@ -1,3 +1,12 @@
+<modal></modal>
+<div class="nav top">
+  <ul>
+    <li (click)="zoom(0.5)" class="zoom-out">Zoom Out</li>
+    <li (click)="zoom(1)" class="standard-zoom">Regular View</li>
+    <li (click)="zoom(1.5)" class="zoom-in">Zoom In</li>
+  </ul>
+</div>
+
 <div id="circle-orbit-container">
   <img id="constellation1" src="./assets/constellation1.png">
   <img id="constellation2" src="./assets/constellation2.png">
@@ -10,7 +19,7 @@
     <img  class="sun" src="./assets/sun.png">
   </div>
   <div id="mercury-orbit">
-    <img (click)="planetInfo('mercury')" class="planet mercury" src="./assets/Mercury.png">
+    <img class="planet mercury" src="./assets/Mercury.png">
   </div>
   <div id="venus-orbit">
     <img class="planet venus" src="./assets/Venus.png">
@@ -53,7 +62,7 @@
   <div class="planet-div"><img class="sun" src="./assets/sun.png"></div>
 </div>
 
-<div class="nav">
+<div class="nav bottom">
   <ul>
     <li (click)="scrollTo('sun')">Sun</li>
     <li (click)="scrollTo('mercury')">Mercury</li>

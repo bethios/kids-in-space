@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ModalComponent } from './modal.component';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Kids In Space';
   lastSelectedOrbit ;
-
-  planetInfo(planet){
-    console.log("planet" + planet);
-  }
 
   scrollTo(element){
     let orbit = element + "-orbit";
@@ -35,6 +32,12 @@ export class AppComponent {
     html.scrollLeft += 100;
     body.scrollTop -= 100;
     html.scrollTop -= 100;
+  }
+
+  zoom(value){
+    let main = document.getElementById('circle-orbit-container');
+    main.style.transform = 'scale(' + value + ')';
+    this.scrollTo('sun')
   }
 
   ngOnInit() {
