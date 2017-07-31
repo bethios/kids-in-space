@@ -1,4 +1,4 @@
-<modal></modal>
+<modal [hidden]="!activePlanet"></modal>
 <div class="nav top">
   <ul>
     <li (click)="zoom(0.5)" class="zoom-out">Zoom Out</li>
@@ -8,58 +8,44 @@
 </div>
 
 <div id="circle-orbit-container">
-  <img id="constellation1" src="./assets/constellation1.png">
-  <img id="constellation2" src="./assets/constellation2.png">
-  <img id="constellation3" src="./assets/constellation3.png">
-  <img id="constellation4" src="./assets/constellation4.png">
-  <img id="constellation5" src="./assets/constellation5.png">
-  <img id="rocket" src="./assets/rocket.png">
-
-  <div id="sun-orbit">
-    <img  class="sun" src="./assets/sun.png">
-  </div>
-  <div id="mercury-orbit">
-    <img class="planet mercury" src="./assets/Mercury.png">
-  </div>
-  <div id="venus-orbit">
-    <img class="planet venus" src="./assets/Venus.png">
-  </div>
-  <div id="earth-orbit">
-    <img  class="planet earth" src="./assets/Earth.png">
-  </div>
-  <div id="mars-orbit">
-    <img  class="planet mars" src="./assets/Mars.png">
-  </div>
-  <div id="jupiter-orbit">
-    <img  class="planet jupiter" src="./assets/Jupiter.png">
-  </div>
-  <div id="saturn-orbit">
-    <img  class="planet saturn" src="./assets/Saturn.png">
-  </div>
-  <div id="uranus-orbit">
-    <img  class="planet uranus" src="./assets/Uranus.png">
+  <div id="pluto-orbit">
+    <img (click)="setActiveItem('pluto')" class="planet pluto" src="./assets/Pluto.png">
   </div>
   <div id="neptune-orbit">
-    <img  class="planet neptune" src="./assets/Neptune.png">
+    <img (click)="setActiveItem('neptune')" class="planet neptune" src="./assets/Neptune.png">
   </div>
-  <div id="pluto-orbit">
-    <img  class="planet pluto" src="./assets/Pluto.png">
+  <div id="uranus-orbit">
+    <img (click)="setActiveItem('uranus')" class="planet uranus" src="./assets/Uranus.png">
   </div>
-  <img id="ufo" src="./assets/UFO.png">
-  <img id="comet" src="./assets/comet.png">
-</div>
-
-<div class="mobile">
-  <div class="planet-div"><img  class="pluto planet" src="./assets/Pluto.png"></div>
-  <div class="planet-div"><img class="neptune planet" src="./assets/Neptune.png"></div>
-  <div class="planet-div"><img class="uranus planet" src="./assets/Uranus.png"></div>
-  <div class="planet-div"><img class="saturn planet" src="./assets/Saturn.png"></div>
-  <div class="planet-div"><img class="jupiter planet" src="./assets/Jupiter.png"></div>
-  <div class="planet-div"><img class="mars planet" src="./assets/Mars.png"></div>
-  <div class="planet-div"><img class="earth planet" src="./assets/Earth.png"></div>
-  <div class="planet-div"><img class="venus planet" src="./assets/Venus.png"></div>
-  <div class="planet-div"><img class="mercury planet" src="./assets/Mercury.png"></div>
-  <div class="planet-div"><img class="sun" src="./assets/sun.png"></div>
+  <div id="saturn-orbit">
+    <img (click)="setActiveItem('saturn')" class="planet saturn" src="./assets/Saturn.png">
+  </div>
+  <div id="jupiter-orbit">
+    <img (click)="setActiveItem('jupiter')" class="planet jupiter" src="./assets/Jupiter.png">
+  </div>
+  <div id="mars-orbit">
+    <img (click)="setActiveItem('mars')" class="planet mars" src="./assets/Mars.png">
+  </div>
+  <div id="earth-orbit">
+    <img (click)="setActiveItem('earth')" class="planet earth" src="./assets/Earth.png">
+  </div>
+  <div id="venus-orbit">
+    <img (click)="setActiveItem('venus')" class="planet venus" src="./assets/Venus.png">
+  </div>
+  <div id="mercury-orbit">
+    <img (click)="setActiveItem('mercury')" class="planet mercury" src="./assets/Mercury.png">
+  </div>
+  <div id="sun-orbit">
+    <img (click)="setActiveItem('sun')"class="sun" src="./assets/sun.png">
+  </div>
+  <img class="extras" (click)="setActiveItem('ufo')" id="ufo" src="./assets/UFO.png">
+  <img class="extras" (click)="setActiveItem('comet')" id="comet" src="./assets/comet.png">
+  <img class="extras" id="constellation1" src="./assets/constellation1.png">
+  <img class="extras" id="constellation2" src="./assets/constellation2.png">
+  <img class="extras" id="constellation3" src="./assets/constellation3.png">
+  <img class="extras" id="constellation4" src="./assets/constellation4.png">
+  <img class="extras" id="constellation5" src="./assets/constellation5.png">
+  <img class="extras" (click)="setActiveItem('rocket')" id="rocket" src="./assets/rocket.png">
 </div>
 
 <div class="nav bottom">

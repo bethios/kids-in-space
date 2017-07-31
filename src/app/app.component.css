@@ -2,21 +2,6 @@ nav{
   display:none;
 }
 
-#circle-orbit-container{
-  display: none;
-}
-
-.mobile{
-  display:inline-block;
-  padding-top: 50px;
-}
-
-.planet-div {
-  padding-bottom: 15vh;
-  text-align: center;
-  width: 100vw;
-}
-
 .sun{
   width: auto;
   display: inline;
@@ -37,17 +22,25 @@ nav{
   transition-property: transform;
 }
 
-.planet:active{
-  -webkit-transform:rotate(360deg);
-  -moz-transform:rotate(360deg);
-  -o-transform:rotate(360deg);
+@media (max-width: 1000px) {
+  .planet:active{
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+  }
+
+  .extras{
+    display:none;
+  }
+
+  #circle-orbit-container div{
+    padding-bottom: 15vh;
+    text-align: center;
+    width: 100vw;
+  }
 }
 
 @media (min-width: 1000px) {
-  .mobile {
-    display: none;
-  }
-
   #rocket{
     z-index: 2;
     -webkit-animation: flight-path 30s linear infinite;
@@ -148,10 +141,6 @@ nav{
 
   .top ul li{
     font-size: 1em;
-  }
-
-  #circle-orbit-container {
-    display: inline-block;
   }
 
   .planet {

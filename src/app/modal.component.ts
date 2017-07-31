@@ -9,6 +9,7 @@ import { PLANETINFO } from './fixtures';
 })
 export class ModalComponent {
   planetInfo: PlanetInfo[];
+  public planet ;
 
   ngOnInit(){
     this.planetInfo = PLANETINFO;
