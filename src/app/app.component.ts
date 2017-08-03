@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ModalComponent } from './modal.component';
+import { ModalComponent } from './console.component';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +10,10 @@ import { ModalComponent } from './modal.component';
 export class AppComponent {
   title = 'Kids In Space';
   lastSelectedOrbit ;
-  public activePlanet = 'sun';
+  activePlanet = 'the Solar System';
 
   setActiveItem(planet){
     this.activePlanet = planet;
-    console.log(this.activePlanet)
   }
 
   scrollTo(element){
