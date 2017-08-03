@@ -71,9 +71,9 @@ export class ModalComponent {
         " play pin the rings on Saturn! Take Saturn to the wall, close your eyes and then spin around and try to tape " +
         "Saturn's rings to it! "},
     "uranus":{
-      'heading': "Now orbiting Earth on the International Space Station!",
+      'heading': "Ready for a gentle landing on Uranus",
       'facts': "Unlike all the other planets Uranus rotates sideways.  Astronomers think this happened because of a big " +
-        "collision between Uranus and another planet when the universe was still forming. ",
+        "collision between Uranus and another object when the universe was still forming. ",
       'image': 'link to sun image',
       'creativity_prompt': "Place a ball on the ground, that'll be Uranus in this experiment.  Take another ball and roll" +
         " it across the floor so it bangs into Uranus.  Does where you hit Uranus change where it moves? Does rolling it " +

@@ -13,26 +13,27 @@ export class AppComponent {
   activePlanet = 'the Solar System';
 
   setActiveItem(planet){
+    if(this.lastSelectedOrbit){
+      this.removeHighlight();
+    }
     this.activePlanet = planet;
   }
 
-  scrollTo(element){
-    let orbit = element + "-orbit";
+  findElement(element){
     let location = document.getElementsByClassName(element)[0];
-    this.highlightElement(element, orbit);
+    this.highlightElement(element);
     location.scrollIntoView();
     let body = document.body;
     let html = document.documentElement;
   }
 
-  highlightElement(element, orbit){
+  highlightElement(element){
+    this.setActiveItem(element);
+
+    let orbit = element + "-orbit";
     if(element !== 'sun'){
       document.getElementById(orbit).style.borderStyle = 'solid';
       document.getElementById(orbit).style.borderColor = 'white';
-
-      if(this.lastSelectedOrbit){
-        this.removeHighlight();
-      }
       this.lastSelectedOrbit = orbit;
     }else if(element === 'sun' && this.lastSelectedOrbit){
       this.removeHighlight()
