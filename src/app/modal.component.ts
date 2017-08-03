@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { AppComponent } from './app.component';
 import { PlanetInfo } from './planet-info';
 import { PLANETINFO } from './fixtures';
 
@@ -8,11 +9,7 @@ import { PLANETINFO } from './fixtures';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent {
-  planetInfo: PlanetInfo[];
-  public planet ;
-
-  ngOnInit(){
-    this.planetInfo = PLANETINFO;
-  }
+  @Input() app: AppComponent;
+  @Input('activePlanet') activePlanet: string;
 
 }

@@ -1,4 +1,4 @@
-<modal [hidden]="!activePlanet"></modal>
+<modal [hidden]="!activePlanet" [activePlanet]=activePlanet></modal>
 <div class="nav top">
   <ul>
     <li (click)="zoom(0.5)" class="zoom-out">Zoom Out</li>
@@ -62,5 +62,3 @@
     <li (click)="scrollTo('pluto')">Pluto</li>
   </ul>
 </div>
-
-

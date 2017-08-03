@@ -10,7 +10,7 @@ import { ModalComponent } from './modal.component';
 export class AppComponent {
   title = 'Kids In Space';
   lastSelectedOrbit ;
-  public activePlanet;
+  public activePlanet = 'sun';
 
   setActiveItem(planet){
     this.activePlanet = planet;
