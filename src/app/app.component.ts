@@ -23,10 +23,6 @@ export class AppComponent {
     location.scrollIntoView();
     let body = document.body;
     let html = document.documentElement;
-    body.scrollLeft += 100;
-    html.scrollLeft += 100;
-    body.scrollTop -= 100;
-    html.scrollTop -= 100;
   }
 
   highlightElement(element, orbit){
@@ -51,12 +47,10 @@ export class AppComponent {
   zoom(value){
     let main = document.getElementById('circle-orbit-container');
     main.style.transform = 'scale(' + value + ')';
-    this.scrollTo('sun')
   }
 
   ngOnInit() {
-    let location = document.getElementsByClassName('sun')[0];
-    location.scrollIntoView();
+    this.zoom(0.5);
   }
 
 }

@@ -41,6 +41,16 @@ nav{
 }
 
 @media (min-width: 1000px) {
+  #circle-orbit-container{
+    display: inline-block;
+    left: -450px;
+    top: -300px;
+    position: relative;
+    padding-right: 25vw;
+    width: 150vw;
+    height: 150vh;
+  }
+
   #rocket{
     z-index: 2;
     -webkit-animation: flight-path 30s linear infinite;
@@ -69,8 +79,8 @@ nav{
   }
 
   #constellation1{
-    top: 50px;
-    left: 50px;
+    top: 150px;
+    left: 20px;
     position: relative;
     width: 150px;
     display: inline;
@@ -86,15 +96,15 @@ nav{
 
   #constellation3{
     top: 1750px;
-    left: 50px;
+    left: -250px;
     position: relative;
     width: 150px;
     display: inline;
   }
 
   #constellation4{
-    top: 0px;
-    left: 500px;
+    top: 500px;
+    left: 1500px;
     position: relative;
     width: 150px;
     display: inline;
