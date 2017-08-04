@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ModalComponent } from './console.component';
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -9,7 +10,8 @@ import { AppComponent } from './app.component';
     ModalComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

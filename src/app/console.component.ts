@@ -3,17 +3,51 @@ import { TitleCasePipe } from '@angular/common';
 import { AppComponent } from './app.component';
 import { PlanetInfo } from './planet-info';
 import { PLANETINFO } from './fixtures';
+import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'console',
   templateUrl: 'console.component.html',
   styleUrls: ['console.component.css']
 })
+
+@Injectable()
 export class ModalComponent {
   @Input() app: AppComponent;
   @Input('activePlanet') activePlanet: string;
 
-  planetInfo= {
+  constructor(private http: Http) { }
+
+  picture ;
+
+  pictureOfTheDay(){
+    this.http.get('https://api.nasa.gov/planetary/apod?api_key=GnLp8cMZdoiagNIRNuNqrEioob2anYToEXCrB8e4')
+      .map(response => response.json())
+      .subscribe(
+        data => this.picture = data,
+        err => this.logError(err),
+        () => console.log('Image grabbed.')
+      );
+  }
+
+  logError(err) {
+    console.error('There was an error: ' + err);
+  }
+
+  ngOnInit() {
+    this.pictureOfTheDay();
+
+
+    //function showCurrentCity(latitude, longitude){
+    //  this.http.get('http://nominatim.openstreetmap.org/reverse?format=json&lat=' + latitude + '&lon=' + longitude + '&zoom=18&addressdetails=1').then(function(response){
+    //    this.currentCity = response.data.address.city
+    //  })
+    //}
+  }
+
+    planetInfo= {
     "sun" :{
       'heading': "We're at the very center of the solar system-- the Sun!",
       'facts': 'Our sun is 4.5 billion years old and will keep shining for another 5 billion years. ' +
