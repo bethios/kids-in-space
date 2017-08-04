@@ -3,11 +3,12 @@
     <h1>Welcome to our Solar System!</h1>
     <p>Our solar system is a huge and wondrous place! Click on the names of the planets below to see the planet's orbit
     around the sun. </p>
-    <p>Imagine I'm a pretty picture! </p>
+    <p>(Imagine I'm a pretty picture! This will be Nasa's picture of the day via their API)</p>
     <p>Then click on the planet to learn fun facts, do science experiments, crafts and more!</p>
   </div>
   <div *ngIf="activePlanet != 'the Solar System'">
     <h1>{{ planetInfo[activePlanet]['heading'] }}</h1>
+    <img class='currentPlanet' src="../assets/{{activePlanet}}.png">
     <p>{{ planetInfo[activePlanet]['facts'] }}</p>
     <p>{{ planetInfo[activePlanet]['creativity_prompt'] }}</p>
   </div>

@@ -15,7 +15,7 @@ export class ModalComponent {
 
   planetInfo= {
     "sun" :{
-      'heading': "Welcome to the sun!",
+      'heading': "We're at the very center of the solar system-- the Sun!",
       'facts': 'Our sun is 4.5 billion years old and will keep shining for another 5 billion years. ' +
       'After that it will turn into a red giant an become much dimmer. ',
       'image': 'link to sun image',
@@ -30,7 +30,7 @@ export class ModalComponent {
       'creativity_prompt': "Mercury has lots of holes or craters.  Roll some playdough into a ball and use rocks" +
         " you find outside to make big craters all over.  How do you think Mercury got its craters? "},
     "venus":{
-      'heading': "We've arrives at Venus!",
+      'heading': "We've arrived at Venus!",
       'facts': "Even though Venus isn't the closest planet to the Sun its still the hottest! The thick atmosphere" +
         " holds in heat causing the greenhouse affect. Its rotates very slowly but orbits the sun very fast, a day" +
         " on Venus is a little longer than a year on Venus.",
@@ -55,7 +55,7 @@ export class ModalComponent {
         " and things around your house to build a model of your habitat.  What will you need? A place to grow food maybe?" +
         " A place to do scientific experiments? To eat? "},
     "jupiter":{
-      'heading': "Approaching Jupiter the largest gas giant.",
+      'heading': "Approaching Jupiter, the largest gas giant.",
       'facts': "Jupiter is the biggest planet in our solar system and has over 50 moons! Jupiter can be seen without a " +
         "telescope so we've known about it for a very long time. ",
       'image': 'link to sun image',
@@ -97,13 +97,20 @@ export class ModalComponent {
       'facts': "In 1977 we launched the voyager space probe loaded with sounds and images all about life on earth. " +
         " The idea was that if any aliens found it they could learn more about us and maybe stop by to say hello!",
       'image': 'link to sun image',
-      'creativity_prompt': "We haven't met any aliens,.. yet! What do you think an alient looks like? sounds like? Draw" +
-        " a picture of your new alient friend.  Make up some fun alien words for 'hello', 'space' and 'planet'"},
+      'creativity_prompt': "We haven't met any aliens,.. yet! What do you think an aliens looks like? sounds like? Draw" +
+        " a picture of your new aliens friend.  Make up some fun alien words for 'hello', 'space' and 'planet'"},
     "rocket":{
       'heading': "3-2-1 Blastoff! Your rocket is zooming through the solar system!",
       'facts': "NASA has plans to send humans to an asteroid in 2025 and Mars in the 2030's. After that the possibilities are endless!",
       'image': 'link to sun image',
       'creativity_prompt': "You are an astronaut on the first mission to land on another planet! Write a letter (or draw" +
-        " pictures) home to tell all about your journey and what you discover when you land."}
+        " pictures) home to tell all about your journey and what you discover when you land."},
+    "comet":{
+      'heading': "Look out your window, there goes Halley's comet!",
+      'facts': "Halley's comet passes earth every 74-79 years making it the only comet regularly visible from Earth with just the" +
+      "naked eye! The next time the comet will be visible from Earth is in the year 2061.",
+      'image': 'link to sun image',
+      'creativity_prompt': "Cut the bottom half off of a water bottle and discard.  Tape or glue strips of red, orange or yellow tissue" +
+      "paper to the cut edge of the top of the water bottle making the comet's tail. Play catch with your comet!"}
   }
 }
