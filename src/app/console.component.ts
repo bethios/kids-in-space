@@ -21,8 +21,14 @@ export class ModalComponent {
   constructor(private http: Http) { }
 
   picture ;
+  mars_data;
+  mars_index;
 
-  pictureOfTheDay(){
+  generateIndex() {
+    this.mars_index = Math.floor(Math.random() * 252);
+  }
+
+  getPictureOfTheDay(){
     this.http.get('https://api.nasa.gov/planetary/apod?api_key=GnLp8cMZdoiagNIRNuNqrEioob2anYToEXCrB8e4')
       .map(response => response.json())
       .subscribe(
@@ -32,22 +38,27 @@ export class ModalComponent {
       );
   }
 
+  getMarsPicture(){
+    this.http.get('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1600&api_key=GnLp8cMZdoiagNIRNuNqrEioob2anYToEXCrB8e4')
+      .map(response => response.json())
+      .subscribe(
+        data => this.mars_data = data,
+        err => this.logError(err),
+        () => console.log('Image grabbed.')
+      );
+    this.generateIndex()
+  }
+
   logError(err) {
     console.error('There was an error: ' + err);
   }
 
   ngOnInit() {
-    this.pictureOfTheDay();
-
-
-    //function showCurrentCity(latitude, longitude){
-    //  this.http.get('http://nominatim.openstreetmap.org/reverse?format=json&lat=' + latitude + '&lon=' + longitude + '&zoom=18&addressdetails=1').then(function(response){
-    //    this.currentCity = response.data.address.city
-    //  })
-    //}
+    this.getPictureOfTheDay();
+    this.getMarsPicture();
   }
 
-    planetInfo= {
+  planetInfo= {
     "sun" :{
       'heading': "We're at the very center of the solar system-- the Sun!",
       'facts': 'Our sun is 4.5 billion years old and will keep shining for another 5 billion years. ' +
