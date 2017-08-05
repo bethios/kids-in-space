@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ModalComponent } from './console.component';
+import { ConsoleComponent } from './console.component';
 
 @Component({
   selector: 'app-root',

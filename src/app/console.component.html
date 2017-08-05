@@ -13,10 +13,19 @@
     <img class='currentPlanet' src="../assets/original/{{activePlanet}}.png">
     <p>{{ planetInfo[activePlanet]['facts'] }}</p>
     <p>{{ planetInfo[activePlanet]['creativity_prompt'] }}</p>
+    <button (click)="getImage(activePlanet)">Get new image</button>
+    <img class='console-image' src="{{ planet_image }}">
+
     <div *ngIf="activePlanet === 'mars'">
       <p>Here's an image that the Curiosity Rover took while exploring Mars.</p>
-      <img class='console-image' src="{{ mars_data.photos[mars_index].img_src }}">
-      <button (click)="generateIndex()">Get new image</button>
+      <img class='console-image' src="{{ mars_data.photos[image_index].img_src }}">
+      <button (click)="generateIndex(256)">Get new image</button>
+    </div>
+    <div *ngIf="activePlanet === 'earth'">
+      <p>There are currently {{iss_astronauts.length}} people orbitting the earth on the International Space Station. Their names are: </p>
+      <ul>
+        <li *ngFor="let person of iss_astronauts ">{{person.name}}</li>
+      </ul>
     </div>
   </div>
 </div>

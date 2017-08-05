@@ -6,6 +6,8 @@ import { PLANETINFO } from './fixtures';
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
+declare const google: any;
+
 
 @Component({
   selector: 'console',
@@ -14,7 +16,7 @@ import 'rxjs/add/operator/map';
 })
 
 @Injectable()
-export class ModalComponent {
+export class ConsoleComponent {
   @Input() app: AppComponent;
   @Input('activePlanet') activePlanet: string;
 
@@ -22,10 +24,18 @@ export class ModalComponent {
 
   picture ;
   mars_data;
-  mars_index;
+  image_index;
+  planet_data;
+  iss_astronauts;
+  planet_image;
 
-  generateIndex() {
-    this.mars_index = Math.floor(Math.random() * 252);
+  ngOnChanges(changes) {
+    console.log(changes.activePlanet.currentValue);
+    this.getImage(changes.activePlanet.currentValue)
+  }
+
+  generateIndex(max) {
+    this.image_index = Math.floor(Math.random() * max);
   }
 
   getPictureOfTheDay(){
@@ -38,6 +48,16 @@ export class ModalComponent {
       );
   }
 
+  getImage(planet){
+    this.http.get('https://images-api.nasa.gov/search?q=' + planet)
+      .map(response => response.json())
+      .subscribe(
+        data => this.planet_image = data.collection.items[0].links[0].href,
+        err => this.logError(err),
+        () => this.generateIndex(this.planet_data.data.metadata.total_hits)
+      );
+  }
+
   getMarsPicture(){
     this.http.get('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1600&api_key=GnLp8cMZdoiagNIRNuNqrEioob2anYToEXCrB8e4')
       .map(response => response.json())
@@ -46,7 +66,17 @@ export class ModalComponent {
         err => this.logError(err),
         () => console.log('Image grabbed.')
       );
-    this.generateIndex()
+    this.generateIndex(256)
+  }
+
+  getISSInfo(){
+    this.http.get('http://api.open-notify.org/astros.json')
+      .map(response => response.json())
+      .subscribe(
+        data => this.iss_astronauts = data.people,
+        err => this.logError(err),
+        () => console.log('ISS info grabbed.')
+      );
   }
 
   logError(err) {
@@ -56,6 +86,7 @@ export class ModalComponent {
   ngOnInit() {
     this.getPictureOfTheDay();
     this.getMarsPicture();
+    this.getISSInfo();
   }
 
   planetInfo= {
@@ -86,7 +117,8 @@ export class ModalComponent {
         " time you have experienced this effect? Ever gotten into a hot car? "},
     "earth" :{
       'heading': "Now orbiting Earth on the International Space Station!",
-      'facts': "this is going to be ISS current # astronauts, current location, last time over your location. use your imagination Caila :)",
+      'facts': "Orbiting right along with the International Space Station is a lot of junk! Old satellites, chunks of rockets" +
+      "even things like tools dropped by astronauts while doing work outside the space station.",
       'image': 'link to sun image',
       'creativity_prompt': "Astronauts in the International Space Station can't have crumbs in space, they can get into " +
         "equipment and cause big problems.  Can you make yourself a snack fit for an astronaut? Some ideas for your mission" +

@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ModalComponent } from './console.component';
+import { ConsoleComponent } from './console.component';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ModalComponent
+    ConsoleComponent
   ],
   imports: [
     BrowserModule,
