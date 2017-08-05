@@ -6,7 +6,6 @@ import { PLANETINFO } from './fixtures';
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
-declare const google: any;
 
 
 @Component({
@@ -25,12 +24,10 @@ export class ConsoleComponent {
   picture ;
   mars_data;
   image_index;
-  planet_data;
   iss_astronauts;
   planet_image;
 
   ngOnChanges(changes) {
-    console.log(changes.activePlanet.currentValue);
     this.getImage(changes.activePlanet.currentValue)
   }
 
@@ -44,7 +41,6 @@ export class ConsoleComponent {
       .subscribe(
         data => this.picture = data,
         err => this.logError(err),
-        () => console.log('Image grabbed.')
       );
   }
 
@@ -52,10 +48,10 @@ export class ConsoleComponent {
     this.http.get('https://images-api.nasa.gov/search?q=' + planet)
       .map(response => response.json())
       .subscribe(
-        data => this.planet_image = data.collection.items[0].links[0].href,
+        data => this.planet_image = data.collection,
         err => this.logError(err),
-        () => this.generateIndex(this.planet_data.data.metadata.total_hits)
       );
+    this.generateIndex(100)
   }
 
   getMarsPicture(){
@@ -64,7 +60,6 @@ export class ConsoleComponent {
       .subscribe(
         data => this.mars_data = data,
         err => this.logError(err),
-        () => console.log('Image grabbed.')
       );
     this.generateIndex(256)
   }
@@ -75,7 +70,6 @@ export class ConsoleComponent {
       .subscribe(
         data => this.iss_astronauts = data.people,
         err => this.logError(err),
-        () => console.log('ISS info grabbed.')
       );
   }
 
