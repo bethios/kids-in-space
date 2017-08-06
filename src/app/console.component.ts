@@ -48,7 +48,7 @@ export class ConsoleComponent {
   getImage(planet) {
     this.generateIndex(100);
 
-    this.http.get('https://images-api.nasa.gov/search?q=' + planet)
+    this.http.get('https://images-api.nasa.gov/search?q=' + planet + "&media_type=image" )
       .map(response => response.json())
       .subscribe(
         data => this.planet_image = data.collection,
