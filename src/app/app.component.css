@@ -6,6 +6,7 @@ nav{
   width: auto;
   display: inline;
   margin: auto;
+  cursor: pointer;
 }
 
 .planet{
@@ -20,6 +21,7 @@ nav{
   -moz-transition-property: -moz-transform;
   -o-transition-property: -o-transform;
   transition-property: transform;
+  cursor: pointer;
 }
 
 @media (max-width: 1000px) {
@@ -31,6 +33,7 @@ nav{
 
   .extras{
     display:none;
+    cursor: pointer;
   }
 
   #circle-orbit-container div{

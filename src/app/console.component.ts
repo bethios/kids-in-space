@@ -45,13 +45,14 @@ export class ConsoleComponent {
   }
 
   getImage(planet){
+    this.generateIndex(100);
+
     this.http.get('https://images-api.nasa.gov/search?q=' + planet)
       .map(response => response.json())
       .subscribe(
         data => this.planet_image = data.collection,
         err => this.logError(err),
       );
-    this.generateIndex(100)
   }
 
   getMarsPicture(){

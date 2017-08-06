@@ -6,7 +6,7 @@
     <p>Then click on a planet to learn fun facts, do science experiments, crafts and more!</p>
     <h2>Come back each day for a new picture straight from NASA!</h2>
     <img class='console-image' src="{{ picture.url }}">
-    <p>{{ picture.explanation }}</p>
+    <p><em>{{ picture.explanation }}</em></p>
   </div>
   <div *ngIf="activePlanet != 'the Solar System'">
     <h1>{{ planetInfo[activePlanet]['heading'] }}</h1>
@@ -14,6 +14,7 @@
     <p>{{ planetInfo[activePlanet]['facts'] }}</p>
     <p>{{ planetInfo[activePlanet]['creativity_prompt'] }}</p>
     <img class='console-image' src="{{ planet_image.items[image_index].links[0].href }}">
+    <p><em>{{ planet_image.items[image_index].data[0].description}}</em></p>
     <button (click)="generateIndex(100)">Get new image</button>
     <div *ngIf="activePlanet === 'mars'">
       <p>Here's an image that the Curiosity Rover took while exploring Mars.</p>
