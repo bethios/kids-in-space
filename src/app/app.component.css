@@ -33,7 +33,6 @@ nav{
 
   .extras{
     display:none;
-    cursor: pointer;
   }
 
   #circle-orbit-container div{
@@ -52,6 +51,11 @@ nav{
     padding-right: 25vw;
     width: 150vw;
     height: 150vh;
+    cursor:all-scroll;
+  }
+
+  .extras{
+    cursor: pointer;
   }
 
   #rocket{
