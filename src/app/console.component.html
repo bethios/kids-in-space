@@ -19,7 +19,6 @@
     <div id="imageModal" class="modal">
       <span class="close" (click)="closeModal()"><i class="ion-close-round"></i></span>
       <img class="modal-content" id="img01" src="{{ planet_image.items[image_index].links[0].href }}">
-      <div id="caption">{{ planet_image.items[image_index].data[0].description}}</div>
     </div>
     <div *ngIf="activePlanet === 'mars'">
       <p>Here's an image that the Curiosity Rover took while exploring Mars.</p>
