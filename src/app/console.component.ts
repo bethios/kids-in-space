@@ -1,8 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TitleCasePipe } from '@angular/common';
 import { AppComponent } from './app.component';
-import { PlanetInfo } from './planet-info';
-import { PLANETINFO } from './fixtures';
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -78,6 +76,14 @@ export class ConsoleComponent {
   logError(err) {
     console.error('There was an error: ' + err);
   }
+
+  displayModal() {
+    document.getElementById('imageModal').style.display = "block";
+  };
+
+  closeModal() {
+    document.getElementById('imageModal').style.display = "none";
+  };
 
   ngOnInit() {
     this.getPictureOfTheDay();
@@ -199,14 +205,4 @@ export class ConsoleComponent {
       "paper to the cut edge of the top of the water bottle making the comet's tail. Play catch with your comet!"
     }
   };
-
-  displayModal() {
-    document.getElementById('imageModal').style.display = "block";
-  };
-
-  closeModal() {
-    document.getElementById('imageModal').style.display = "none";
-  };
-
-
 }
