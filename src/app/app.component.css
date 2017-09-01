@@ -171,6 +171,11 @@ nav{
     height: 100px;
   }
 
+  .orbit{
+    border: 2px #4A437F dashed;
+    border-radius: 100%;
+  }
+
   #sun-orbit {
     position: absolute;
     top: 1035px;
@@ -183,8 +188,6 @@ nav{
     left: 1000px;
     width: 175px;
     height: 175px;
-    border: 2px #4A437F dashed;
-    border-radius: 100%;
     -webkit-animation: orbit-right 10s linear infinite;
     animation: orbit-right 10s linear infinite;
   }
@@ -200,8 +203,6 @@ nav{
     left: 900px;
     width: 375px;
     height: 375px;
-    border: 2px #4A437F dashed;
-    border-radius: 100%;
     -webkit-animation: orbit-right 20s linear infinite;
     animation: orbit-right 15s linear infinite;
   }
@@ -218,8 +219,6 @@ nav{
     left: 800px;
     width: 575px;
     height: 575px;
-    border: 2px #4A437F dashed;
-    border-radius: 100%;
     -webkit-animation: orbit-right 30s linear infinite;
     animation: orbit-right 20s linear infinite;
   }
@@ -236,8 +235,6 @@ nav{
     left: 700px;
     width: 775px;
     height: 775px;
-    border: 2px #4A437F dashed;
-    border-radius: 100%;
     -webkit-animation: orbit-right 50s linear infinite;
     animation: orbit-right 25s linear infinite;
   }
@@ -254,8 +251,6 @@ nav{
     left: 600px;
     width: 975px;
     height: 975px;
-    border: 2px #4A437F dashed;
-    border-radius: 100%;
     -webkit-animation: orbit-right 80s linear infinite;
     animation: orbit-right 30s linear infinite;
   }
@@ -272,8 +267,6 @@ nav{
     left: 500px;
     width: 1175px;
     height: 1175px;
-    border: 2px #4A437F dashed;
-    border-radius: 100%;
     -webkit-animation: orbit-right 110s linear infinite;
     animation: orbit-right 35s linear infinite;
   }
@@ -290,8 +283,6 @@ nav{
     left: 400px;
     width: 1375px;
     height: 1375px;
-    border: 2px #4A437F dashed;
-    border-radius: 100%;
     -webkit-animation: orbit-right 130s linear infinite;
     animation: orbit-right 40s linear infinite;
   }
@@ -308,8 +299,6 @@ nav{
     left: 300px;
     width: 1575px;
     height: 1575px;
-    border: 2px #4A437F dashed;
-    border-radius: 100%;
     -webkit-animation: orbit-right 160s linear infinite;
     animation: orbit-right 45s linear infinite;
   }
@@ -326,8 +315,6 @@ nav{
     left: 200px;
     width: 1775px;
     height: 1775px;
-    border: 2px #4A437F dashed;
-    border-radius: 100%;
     -webkit-animation: orbit-right 200s linear infinite;
     animation: orbit-right 50s linear infinite;
   }
