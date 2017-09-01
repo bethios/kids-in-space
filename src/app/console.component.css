@@ -32,3 +32,70 @@ h2{
   height: auto;
 }
 
+#planetImage {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#planetImage:hover {opacity: 0.7;}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow: scroll;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80vw;
+  max-height: 80vh;
+  padding: 30px;
+}
+
+.modal-content{
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.8s;
+  animation-name: zoom;
+  animation-duration: 0.8s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
