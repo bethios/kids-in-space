@@ -25,15 +25,20 @@ export class ConsoleComponent {
   image_index;
   iss_astronauts;
   planet_image;
-  currentActivity;
+  currentActivity = 'learn';
+  lastActivity = 'learn';
 
   ngOnChanges(changes) {
     this.getImage(changes.activePlanet.currentValue)
   }
 
   setActivity(activity){
+    if(this.lastActivity){
+      document.getElementsByClassName(this.lastActivity)[0].classList.add('glowing');
+    }
     this.currentActivity = activity;
-    console.log(activity);
+    document.getElementsByClassName(activity)[0].classList.remove('glowing');
+    this.lastActivity = activity;
   }
 
   generateIndex(max) {

@@ -19,6 +19,11 @@ export class AppComponent {
     this.activePlanet = planet;
   }
 
+  goHome(){
+    this.activePlanet = 'the Solar System';
+    this.zoom(0.5);
+  }
+
   findElement(element){
     let location = document.getElementsByClassName(element)[0];
     this.highlightElement(element);
