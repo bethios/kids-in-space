@@ -1,72 +1,64 @@
-
-<div id="circle-orbit-container">
-  <img id="constellation1" src="./assets/constellation1.png">
-  <img id="constellation2" src="./assets/constellation2.png">
-  <img id="constellation3" src="./assets/constellation3.png">
-  <img id="constellation4" src="./assets/constellation4.png">
-  <img id="constellation5" src="./assets/constellation5.png">
-  <img id="rocket" src="./assets/rocket.png">
-
-  <div id="sun-orbit">
-    <img  class="sun" src="./assets/sun.png">
-  </div>
-  <div id="mercury-orbit">
-    <img class="planet mercury" src="./assets/Mercury.png">
-  </div>
-  <div id="venus-orbit">
-    <img class="planet venus" src="./assets/Venus.png">
-  </div>
-  <div id="earth-orbit">
-    <img  class="planet earth" src="./assets/Earth.png">
-  </div>
-  <div id="mars-orbit">
-    <img  class="planet mars" src="./assets/Mars.png">
-  </div>
-  <div id="jupiter-orbit">
-    <img  class="planet jupiter" src="./assets/Jupiter.png">
-  </div>
-  <div id="saturn-orbit">
-    <img  class="planet saturn" src="./assets/Saturn.png">
-  </div>
-  <div id="uranus-orbit">
-    <img  class="planet uranus" src="./assets/Uranus.png">
-  </div>
-  <div id="neptune-orbit">
-    <img  class="planet neptune" src="./assets/Neptune.png">
-  </div>
-  <div id="pluto-orbit">
-    <img  class="planet pluto" src="./assets/Pluto.png">
-  </div>
-  <img id="ufo" src="./assets/UFO.png">
-  <img id="comet" src="./assets/comet.png">
-</div>
-
-<div class="mobile">
-  <div class="planet-div"><img  class="pluto planet" src="./assets/Pluto.png"></div>
-  <div class="planet-div"><img class="neptune planet" src="./assets/Neptune.png"></div>
-  <div class="planet-div"><img class="uranus planet" src="./assets/Uranus.png"></div>
-  <div class="planet-div"><img class="saturn planet" src="./assets/Saturn.png"></div>
-  <div class="planet-div"><img class="jupiter planet" src="./assets/Jupiter.png"></div>
-  <div class="planet-div"><img class="mars planet" src="./assets/Mars.png"></div>
-  <div class="planet-div"><img class="earth planet" src="./assets/Earth.png"></div>
-  <div class="planet-div"><img class="venus planet" src="./assets/Venus.png"></div>
-  <div class="planet-div"><img class="mercury planet" src="./assets/Mercury.png"></div>
-  <div class="planet-div"><img class="sun" src="./assets/sun.png"></div>
-</div>
-
-<div class="nav">
+<console [activePlanet]=activePlanet></console>
+<div class="nav top">
   <ul>
-    <li (click)="scrollTo('sun')">Sun</li>
-    <li (click)="scrollTo('mercury')">Mercury</li>
-    <li (click)="scrollTo('venus')">Venus</li>
-    <li (click)="scrollTo('earth')">Earth</li>
-    <li (click)="scrollTo('mars')">Mars</li>
-    <li (click)="scrollTo('jupiter')">Jupiter</li>
-    <li (click)="scrollTo('saturn')">Saturn</li>
-    <li (click)="scrollTo('uranus')">Uranus</li>
-    <li (click)="scrollTo('neptune')">Neptune</li>
-    <li (click)="scrollTo('pluto')">Pluto</li>
+    <li (click)="zoom(0.5)" class="zoom-out">Zoom Out</li>
+    <li (click)="zoom(1)" class="standard-zoom">Regular View</li>
+    <li (click)="zoom(1.5)" class="zoom-in">Zoom In</li>
   </ul>
 </div>
 
+<div id="circle-orbit-container">
+  <div id="pluto-orbit">
+    <img (click)="highlightElement('pluto')" class="planet pluto" src="./assets/pluto.png">
+  </div>
+  <div id="neptune-orbit">
+    <img (click)="highlightElement('neptune')" class="planet neptune" src="./assets/neptune.png">
+  </div>
+  <div id="uranus-orbit">
+    <img (click)="highlightElement('uranus')" class="planet uranus" src="./assets/uranus.png">
+  </div>
+  <div id="saturn-orbit">
+    <img (click)="highlightElement('saturn')" class="planet saturn" src="./assets/saturn.png">
+  </div>
+  <div id="jupiter-orbit">
+    <img (click)="highlightElement('jupiter')" class="planet jupiter" src="./assets/jupiter.png">
+  </div>
+  <div id="mars-orbit">
+    <img (click)="highlightElement('mars')" class="planet mars" src="./assets/mars.png">
+  </div>
+  <div id="earth-orbit">
+    <img (click)="highlightElement('earth')" class="planet earth" src="./assets/earth.png">
+  </div>
+  <div id="venus-orbit">
+    <img (click)="highlightElement('venus')" class="planet venus" src="./assets/venus.png">
+  </div>
+  <div id="mercury-orbit">
+    <img (click)="highlightElement('mercury')" class="planet mercury" src="./assets/mercury.png">
+  </div>
+  <div id="sun-orbit">
+    <img (click)="setActiveItem('sun')"class="sun" src="./assets/sun.png">
+  </div>
+  <img class="extras" (click)="setActiveItem('ufo')" id="ufo" src="./assets/ufo.png">
+  <img class="extras" (click)="setActiveItem('comet')" id="comet" src="./assets/comet.png">
+  <img class="extras" id="constellation1" src="./assets/constellation1.png">
+  <img class="extras" id="constellation2" src="./assets/constellation2.png">
+  <img class="extras" id="constellation3" src="./assets/constellation3.png">
+  <img class="extras" id="constellation4" src="./assets/constellation4.png">
+  <img class="extras" id="constellation5" src="./assets/constellation5.png">
+  <img class="extras" (click)="setActiveItem('rocket')" id="rocket" src="./assets/rocket.png">
+</div>
 
+<div class="nav bottom">
+  <ul>
+    <li (click)="findElement('sun')">Sun</li>
+    <li (click)="findElement('mercury')">Mercury</li>
+    <li (click)="findElement('venus')">Venus</li>
+    <li (click)="findElement('earth')">Earth</li>
+    <li (click)="findElement('mars')">Mars</li>
+    <li (click)="findElement('jupiter')">Jupiter</li>
+    <li (click)="findElement('saturn')">Saturn</li>
+    <li (click)="findElement('uranus')">Uranus</li>
+    <li (click)="findElement('neptune')">Neptune</li>
+    <li (click)="findElement('pluto')">Pluto</li>
+  </ul>
+</div>

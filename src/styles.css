@@ -7,3 +7,11 @@ body{
   font-family: 'Cairo', sans-serif;
 }
 
+button{
+  font-size: 1.1em;
+  padding: 5px;
+  color: white;
+  background-color: black;
+  margin: 5px;
+  border-radius: 5px;
+}

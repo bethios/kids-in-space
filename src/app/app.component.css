@@ -2,25 +2,11 @@ nav{
   display:none;
 }
 
-#circle-orbit-container{
-  display: none;
-}
-
-.mobile{
-  display:inline-block;
-  padding-top: 50px;
-}
-
-.planet-div {
-  padding-bottom: 15vh;
-  text-align: center;
-  width: 100vw;
-}
-
 .sun{
   width: auto;
   display: inline;
   margin: auto;
+  cursor: pointer;
 }
 
 .planet{
@@ -35,17 +21,37 @@ nav{
   -moz-transition-property: -moz-transform;
   -o-transition-property: -o-transform;
   transition-property: transform;
+  cursor: pointer;
 }
 
-.planet:active{
-  -webkit-transform:rotate(360deg);
-  -moz-transform:rotate(360deg);
-  -o-transform:rotate(360deg);
+@media (max-width: 1000px) {
+  .planet:active{
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+  }
+
+  .extras{
+    display:none;
+    cursor: pointer;
+  }
+
+  #circle-orbit-container div{
+    padding-bottom: 15vh;
+    text-align: center;
+    width: 100vw;
+  }
 }
 
 @media (min-width: 1000px) {
-  .mobile {
-    display: none;
+  #circle-orbit-container{
+    display: inline-block;
+    left: -450px;
+    top: -300px;
+    position: relative;
+    padding-right: 25vw;
+    width: 150vw;
+    height: 150vh;
   }
 
   #rocket{
@@ -76,8 +82,8 @@ nav{
   }
 
   #constellation1{
-    top: 50px;
-    left: 50px;
+    top: 150px;
+    left: 20px;
     position: relative;
     width: 150px;
     display: inline;
@@ -93,15 +99,15 @@ nav{
 
   #constellation3{
     top: 1750px;
-    left: 50px;
+    left: -250px;
     position: relative;
     width: 150px;
     display: inline;
   }
 
   #constellation4{
-    top: 0px;
-    left: 500px;
+    top: 500px;
+    left: 1500px;
     position: relative;
     width: 150px;
     display: inline;
@@ -118,11 +124,19 @@ nav{
   .nav{
     cursor: pointer;
     display: block;
-    bottom: 0;
     position: fixed;
     color: white;
-    width: 100%;
     z-index: 5;
+  }
+
+  .top{
+    top: 0;
+  }
+
+
+  .bottom{
+    bottom: 0;
+    width: 100%;
   }
 
   .nav ul{
@@ -138,8 +152,8 @@ nav{
     font-size: 1.4em;
   }
 
-  #circle-orbit-container {
-    display: inline-block;
+  .top ul li{
+    font-size: 1em;
   }
 
   .planet {
@@ -183,7 +197,7 @@ nav{
     height: 375px;
     border: 2px #4A437F dashed;
     border-radius: 100%;
-    -webkit-animation: orbit-right 15s linear infinite;
+    -webkit-animation: orbit-right 20s linear infinite;
     animation: orbit-right 15s linear infinite;
   }
 
@@ -201,7 +215,7 @@ nav{
     height: 575px;
     border: 2px #4A437F dashed;
     border-radius: 100%;
-    -webkit-animation: orbit-right 20s linear infinite;
+    -webkit-animation: orbit-right 30s linear infinite;
     animation: orbit-right 20s linear infinite;
   }
 
@@ -219,7 +233,7 @@ nav{
     height: 775px;
     border: 2px #4A437F dashed;
     border-radius: 100%;
-    -webkit-animation: orbit-right 25s linear infinite;
+    -webkit-animation: orbit-right 50s linear infinite;
     animation: orbit-right 25s linear infinite;
   }
 
@@ -237,7 +251,7 @@ nav{
     height: 975px;
     border: 2px #4A437F dashed;
     border-radius: 100%;
-    -webkit-animation: orbit-right 30s linear infinite;
+    -webkit-animation: orbit-right 80s linear infinite;
     animation: orbit-right 30s linear infinite;
   }
 
@@ -255,7 +269,7 @@ nav{
     height: 1175px;
     border: 2px #4A437F dashed;
     border-radius: 100%;
-    -webkit-animation: orbit-right 35s linear infinite;
+    -webkit-animation: orbit-right 110s linear infinite;
     animation: orbit-right 35s linear infinite;
   }
 
@@ -273,7 +287,7 @@ nav{
     height: 1375px;
     border: 2px #4A437F dashed;
     border-radius: 100%;
-    -webkit-animation: orbit-right 40s linear infinite;
+    -webkit-animation: orbit-right 130s linear infinite;
     animation: orbit-right 40s linear infinite;
   }
 
@@ -291,7 +305,7 @@ nav{
     height: 1575px;
     border: 2px #4A437F dashed;
     border-radius: 100%;
-    -webkit-animation: orbit-right 45s linear infinite;
+    -webkit-animation: orbit-right 160s linear infinite;
     animation: orbit-right 45s linear infinite;
   }
 
@@ -309,7 +323,7 @@ nav{
     height: 1775px;
     border: 2px #4A437F dashed;
     border-radius: 100%;
-    -webkit-animation: orbit-right 50s linear infinite;
+    -webkit-animation: orbit-right 200s linear infinite;
     animation: orbit-right 50s linear infinite;
   }
 
