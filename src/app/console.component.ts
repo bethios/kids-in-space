@@ -117,23 +117,23 @@ export class ConsoleComponent {
     },
     "venus": {
       'heading': "We've arrived at Venus!",
-      'facts': "Even though Venus isn't the closest planet to the Sun its still the hottest! The thick atmosphere" +
-      " holds in heat causing the greenhouse affect. Its rotates very slowly but orbits the sun very fast, a day" +
+      'facts': "Even though Venus isn't the closest planet to the Sun, it's still the hottest! The thick atmosphere" +
+      " holds in heat causing the greenhouse effect. It rotates very slowly but orbits the sun very fast, a day" +
       " on Venus is a little longer than a year on Venus.",
       'image': 'link to sun image',
       'creativity_prompt': "Get two jars and two thermometers. Place one thermometer in the jar.  Place both on a sunny" +
-      " windowsil, making sure the jar's lid doesn't cast a shadow on either.  Wait 10 minutes and record the" +
+      " windowsill, making sure the jar's lid doesn't cast a shadow on either.  Wait 10 minutes and record the" +
       " temperatures.  The jar temperature should be higher because of the greenhouse effect! Can you think of another" +
       " time you have experienced this effect? Ever gotten into a hot car? "
     },
     "earth": {
       'heading': "Now orbiting Earth on the International Space Station!",
-      'facts': "Orbiting right along with the International Space Station is a lot of junk! Old satellites, chunks of rockets" +
+      'facts': "Orbiting right along with the International Space Station is a lot of junk! Old satellites, chunks of rockets, " +
       "even things like tools dropped by astronauts while doing work outside the space station.",
       'image': 'link to sun image',
-      'creativity_prompt': "Astronauts in the International Space Station can't have crumbs in space, they can get into " +
+      'creativity_prompt': "Astronauts in the International Space Station can't have crumbs in space; they can get into " +
       "equipment and cause big problems.  Can you make yourself a snack fit for an astronaut? Some ideas for your mission" +
-      " are raisins, fresh fruit, granola and cashew! Time to get packing for outer space!"
+      " are raisins, fresh fruit, granola and cashews! Time to get packing for outer space!"
     },
     "mars": {
       'heading': "Now approaching the red planet, Mars!",

@@ -31,7 +31,7 @@
     <div *ngIf="currentActivity == 'see'">
       <img id="planetImage" class='console-image' (click)="displayModal()" src="{{ planet_image.items[image_index].links[0].href }}">
       <p><em>{{ planet_image.items[image_index].data[0].description}}</em></p>
-      <button (click)="generateIndex(100)">Get new image</button>
+      <button (click)="generateIndex(100)">Discover More</button>
       <div id="imageModal" class="modal">
         <span class="close" (click)="closeModal()"><i class="ion-close-round"></i></span>
         <img class="modal-content" id="img01" src="{{ planet_image.items[image_index].links[0].href }}">
@@ -39,7 +39,7 @@
       <div *ngIf="activePlanet === 'mars'">
         <p>Here's an image that the Curiosity Rover took while exploring Mars.</p>
         <img class='console-image' src="{{ mars_data.photos[image_index].img_src }}">
-        <button (click)="generateIndex(256)">Get new image</button>
+        <button (click)="generateIndex(256)">Discover More</button>
       </div>
     </div>
   </div>
