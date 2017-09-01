@@ -25,9 +25,15 @@ export class ConsoleComponent {
   image_index;
   iss_astronauts;
   planet_image;
+  currentActivity;
 
   ngOnChanges(changes) {
     this.getImage(changes.activePlanet.currentValue)
+  }
+
+  setActivity(activity){
+    this.currentActivity = activity;
+    console.log(activity);
   }
 
   generateIndex(max) {

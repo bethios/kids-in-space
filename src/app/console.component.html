@@ -10,26 +10,37 @@
   </div>
   <div *ngIf="activePlanet != 'the Solar System'">
     <h1>{{ planetInfo[activePlanet]['heading'] }}</h1>
-    <img class='currentPlanet' src="../assets/original/{{activePlanet}}.png">
-    <p>{{ planetInfo[activePlanet]['facts'] }}</p>
-    <p>{{ planetInfo[activePlanet]['creativity_prompt'] }}</p>
-    <img id="planetImage" class='console-image' (click)="displayModal()" src="{{ planet_image.items[image_index].links[0].href }}">
-    <button (click)="generateIndex(100)">Get new image</button>
-    <p><em>{{ planet_image.items[image_index].data[0].description}}</em></p>
-    <div id="imageModal" class="modal">
-      <span class="close" (click)="closeModal()"><i class="ion-close-round"></i></span>
-      <img class="modal-content" id="img01" src="{{ planet_image.items[image_index].links[0].href }}">
+    <div class="control-buttons">
+      <button (click)="setActivity('learn')">Learn</button>
+      <button (click)="setActivity('create')">Create</button>
+      <button (click)="setActivity('see')">See</button>
     </div>
-    <div *ngIf="activePlanet === 'mars'">
-      <p>Here's an image that the Curiosity Rover took while exploring Mars.</p>
-      <img class='console-image' src="{{ mars_data.photos[image_index].img_src }}">
-      <button (click)="generateIndex(256)">Get new image</button>
+    <div *ngIf="currentActivity == 'learn'">
+      <img class='currentPlanet' src="../assets/original/{{activePlanet}}.png">
+      <p>{{ planetInfo[activePlanet]['facts'] }}</p>
+      <div *ngIf="activePlanet === 'earth'">
+        <p>There are currently {{iss_astronauts.length}} people orbitting the earth on the International Space Station. Their names are: </p>
+        <ul>
+          <li *ngFor="let person of iss_astronauts ">{{person.name}}</li>
+        </ul>
+      </div>
     </div>
-    <div *ngIf="activePlanet === 'earth'">
-      <p>There are currently {{iss_astronauts.length}} people orbitting the earth on the International Space Station. Their names are: </p>
-      <ul>
-        <li *ngFor="let person of iss_astronauts ">{{person.name}}</li>
-      </ul>
+    <div *ngIf="currentActivity == 'create'">
+      <p>{{ planetInfo[activePlanet]['creativity_prompt'] }}</p>
+    </div>
+    <div *ngIf="currentActivity == 'see'">
+      <img id="planetImage" class='console-image' (click)="displayModal()" src="{{ planet_image.items[image_index].links[0].href }}">
+      <p><em>{{ planet_image.items[image_index].data[0].description}}</em></p>
+      <button (click)="generateIndex(100)">Get new image</button>
+      <div id="imageModal" class="modal">
+        <span class="close" (click)="closeModal()"><i class="ion-close-round"></i></span>
+        <img class="modal-content" id="img01" src="{{ planet_image.items[image_index].links[0].href }}">
+      </div>
+      <div *ngIf="activePlanet === 'mars'">
+        <p>Here's an image that the Curiosity Rover took while exploring Mars.</p>
+        <img class='console-image' src="{{ mars_data.photos[image_index].img_src }}">
+        <button (click)="generateIndex(256)">Get new image</button>
+      </div>
     </div>
   </div>
 </div>
